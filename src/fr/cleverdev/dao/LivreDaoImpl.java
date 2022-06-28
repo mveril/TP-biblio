@@ -12,11 +12,11 @@ import fr.cleverdev.model.Livre;
 
 public class LivreDaoImpl implements Dao<Livre> {
 
-	private static final String SQL_INSERT       = "INSERT INTO auteur(id_auteur,titre,nb_pages,categorie) VALUES(?,?,?,?)";
+	private static final String SQL_INSERT       = "INSERT INTO livre(id_auteur,titre,nb_pages,categorie) VALUES(?,?,?,?)";
 	private static final String SQL_SELECT       = "SELECT id,nom,prenom,telephone,email FROM livre";
     private static final String SQL_SELECT_BY_ID = "SELECT id,id_auteur,titre,nb_pages,categorie FROM livre WHERE id = ?";
-	private static final String SQL_DELETE_BY_ID = "DELETE FROM auteur WHERE id = ? ";
-	private static final String SQL_Modify_BY_ID = "UPDATE auteur SET id_auteur = ?, titre = ?,nb_pages = ?,categorie = ? WHERE id = ? ";
+	private static final String SQL_DELETE_BY_ID = "DELETE FROM livre WHERE id = ? ";
+	private static final String SQL_Modify_BY_ID = "UPDATE livre SET id_auteur = ?, titre = ?,nb_pages = ?,categorie = ? WHERE id = ? ";
 	private DaoFactory factory;
 	
 	
